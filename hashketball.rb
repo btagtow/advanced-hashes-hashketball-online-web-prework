@@ -173,15 +173,35 @@ def big_shoe_rebounds
   end 
   return rebounds 
 end 
+
+
 def most_points_scored 
-  return "Ben Gordon"
+  player = ""
+  highscore = 0
+  game_hash.each do |team, info|
+    if high < info[:player][:points] then
+      player = info[:player][:player_name]
+      highscore = info[:player][:player_name]
+    end 
+  end
+  puts player
+  puts highscore
+  
+  sleep(3)
+  high
 end 
+
+
 def winning_team
   return "Brooklyn Nets"
 end 
+
+
 def player_with_longest_name 
   return "Bismack Biyombo"
 end 
+
+
 def long_name_steals_a_ton?
   return true 
 end 
